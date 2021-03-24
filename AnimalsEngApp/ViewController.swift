@@ -9,20 +9,22 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
+    // MARK: - ID Outlets
     @IBOutlet weak var AnimalText: UILabel!
+    @IBOutlet weak var ScoreCount: UILabel!
     
     @IBOutlet weak var AnimalBtnFirst: UIButton!
     @IBOutlet weak var AnimalBtnSecond: UIButton!
     @IBOutlet weak var AnimalBtnThird: UIButton!
     @IBOutlet weak var AnimalBtnFour: UIButton!
-    @IBOutlet weak var ScoreCount: UILabel!
-    
-    
-    
-    let animalsImage: [String : UIImage?] = ["Pig" : #imageLiteral(resourceName: "icons8-pig"), "Horse" : #imageLiteral(resourceName: "icons8-trotting_horse"), "Elephant" : #imageLiteral(resourceName: "icons8-elephant"), "Sheep" : #imageLiteral(resourceName: "icons8-sheep"), "Rat" : #imageLiteral(resourceName: "icons8-rat_silhouette"), "Bird" : #imageLiteral(resourceName: "icons8-top_view_bird")]
-    
+
+    // MARK: - Public Properties
+    let animalsImage: [String : UIImage?] = [
+        "Pig" : #imageLiteral(resourceName: "icons8-pig"), "Horse" : #imageLiteral(resourceName: "icons8-trotting_horse"), "Elephant" : #imageLiteral(resourceName: "icons8-elephant"),
+        "Sheep" : #imageLiteral(resourceName: "icons8-sheep"), "Rat" : #imageLiteral(resourceName: "icons8-rat_silhouette"), "Bird" : #imageLiteral(resourceName: "icons8-top_view_bird")
+    ]
     let animalsName = ["Pig", "Horse", "Elephant", "Sheep", "Rat", "Bird"]
+    
     var notChooseAnimals = [""]
     var randAnimal = ""
     var animalOfBtnFirst = ""
@@ -36,20 +38,68 @@ class ViewController: UIViewController {
     var checkThird = "Not correctly"
     var checkFour = "Not correctly"
     
-    
-    
-    
+    // MARK: Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         ScoreCount.text = "0"
         setAnimalText()
         setArrayWithoutChooseAnimal()
         randBtn()
         setImage()
-        
     }
     
+    // MARK: ID Action
+    @IBAction func BtnNextPress() {
+          hideBtnForAnimation()
+          AnimalText.alpha = 0
+          setAnimalText()
+          setArrayWithoutChooseAnimal()
+          randBtn()
+          setImage()
+          AnimalBtnFirst.isEnabled = true
+          AnimalBtnSecond.isEnabled = true
+          AnimalBtnThird.isEnabled = true
+          AnimalBtnFour.isEnabled = true
+          animatingBtn()
+          animateLabel(chooseWhatsAnimate: AnimalText)
+      }
+      
+      
+      @IBAction func BtnFirstPress(_ sender: Any) {
+          AnimalText.alpha = 0
+          AnimalText.text = checkFirst
+          animateLabel(chooseWhatsAnimate: AnimalText)
+          btnEnableIsFalse()
+          scoreCheck(check: checkFirst)
+      }
+      
+      @IBAction func BtnSecondPress(_ sender: Any) {
+          AnimalText.alpha = 0
+          AnimalText.text = checkSecond
+          animateLabel(chooseWhatsAnimate: AnimalText)
+          btnEnableIsFalse()
+          scoreCheck(check: checkSecond)
+      }
+      
+      
+      @IBAction func BtnThirdPress(_ sender: Any) {
+          AnimalText.alpha = 0
+          AnimalText.text = checkThird
+          animateLabel(chooseWhatsAnimate: AnimalText)
+          btnEnableIsFalse()
+          scoreCheck(check: checkThird)
+      }
+      
+      
+      @IBAction func BtnFourPress(_ sender: Any) {
+          AnimalText.alpha = 0
+          AnimalText.text = checkFour
+          animateLabel(chooseWhatsAnimate: AnimalText)
+          btnEnableIsFalse()
+          scoreCheck(check: checkFour)
+      }
+
+    // MARK: - Public Methods
     func setAnimalText() {
         randAnimal = animalsName.randomElement()!
         AnimalText.text = randAnimal
@@ -120,11 +170,18 @@ class ViewController: UIViewController {
     
     
     
-    func animate() {
+    func animateLabel(chooseWhatsAnimate: UILabel) {
         UIView.animate(withDuration: 1.5, animations:{
-            self.AnimalText.alpha = 1
+            chooseWhatsAnimate.alpha = 1
         } )
     }
+    
+    func animateBtn(chooseWhatsAnimate: UIButton) {
+        UIView.animate(withDuration: 1.5, animations:{
+            chooseWhatsAnimate.alpha = 1
+        } )
+    }
+    
     
     func btnEnableIsFalse() {
         AnimalBtnFirst.isEnabled = false
@@ -142,50 +199,21 @@ class ViewController: UIViewController {
         ScoreCount.text = String(score)
     }
     
-    @IBAction func BtnNextPress() {
-        setAnimalText()
-        setArrayWithoutChooseAnimal()
-        randBtn()
-        setImage()
-        AnimalBtnFirst.isEnabled = true
-        AnimalBtnSecond.isEnabled = true
-        AnimalBtnThird.isEnabled = true
-        AnimalBtnFour.isEnabled = true
+    func hideBtnForAnimation() {
+        AnimalBtnFirst.alpha = 0
+        AnimalBtnSecond.alpha = 0
+        AnimalBtnThird.alpha = 0
+        AnimalBtnFour.alpha = 0
+    }
+    
+    func animatingBtn() {
+        animateBtn(chooseWhatsAnimate: AnimalBtnFirst)
+        animateBtn(chooseWhatsAnimate: AnimalBtnSecond)
+        animateBtn(chooseWhatsAnimate: AnimalBtnThird)
+        animateBtn(chooseWhatsAnimate: AnimalBtnFour)
     }
     
     
-    @IBAction func BtnFirstPress(_ sender: Any) {
-        AnimalText.alpha = 0
-        AnimalText.text = checkFirst
-        animate()
-        btnEnableIsFalse()
-        scoreCheck(check: checkFirst)
-    }
-    
-    @IBAction func BtnSecondPress(_ sender: Any) {
-        AnimalText.alpha = 0
-        AnimalText.text = checkSecond
-        animate()
-        btnEnableIsFalse()
-        scoreCheck(check: checkSecond)
-    }
-    
-    
-    @IBAction func BtnThirdPress(_ sender: Any) {
-        AnimalText.alpha = 0
-        AnimalText.text = checkThird
-        animate()
-        btnEnableIsFalse()
-        scoreCheck(check: checkThird)
-    }
-    
-    
-    @IBAction func BtnFourPress(_ sender: Any) {
-        AnimalText.alpha = 0
-        AnimalText.text = checkFour
-        animate()
-        btnEnableIsFalse()
-        scoreCheck(check: checkFour)
-    }
 }
+  
 

@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPn-eW-nvc">
-                                <rect key="frame" x="79.666666666666671" y="412" width="80.000000000000014" height="80"/>
+                                <rect key="frame" x="75" y="412" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="aLP-z0-Y54"/>
                                     <constraint firstAttribute="height" constant="80" id="zr0-qh-TJX"/>
@@ -37,7 +37,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5Q-Ou-wvm">
-                                <rect key="frame" x="229.66666666666663" y="412" width="80" height="80"/>
+                                <rect key="frame" x="235" y="412" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="7pw-3U-wWq"/>
                                     <constraint firstAttribute="width" constant="80" id="ZFe-BQ-HyR"/>
@@ -50,7 +50,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRE-7A-mkX">
-                                <rect key="frame" x="229.66666666666663" y="562" width="80" height="80"/>
+                                <rect key="frame" x="235" y="562" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="xZr-Ll-pRG"/>
                                     <constraint firstAttribute="width" constant="80" id="y1i-Ty-WDK"/>
@@ -64,7 +64,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nw6-uO-4rN">
-                                <rect key="frame" x="79.666666666666671" y="562" width="80.000000000000014" height="80"/>
+                                <rect key="frame" x="75" y="562" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="1TH-xg-VTy"/>
                                     <constraint firstAttribute="width" constant="80" id="BqL-GX-DUn"/>
@@ -74,16 +74,6 @@
                                 </state>
                                 <connections>
                                     <action selector="BtnFourPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wa1-fO-15Q"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z56-5h-vQn">
-                                <rect key="frame" x="169.66666666666666" y="709" width="51" height="52"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="BtnNextPress" destination="BYZ-38-t0r" eventType="touchUpInside" id="8m2-hB-c8X"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="L8Z-5K-3iJ">
@@ -103,23 +93,33 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z56-5h-vQn">
+                                <rect key="frame" x="169.66666666666666" y="709" width="51" height="52"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnNextPress" destination="BYZ-38-t0r" eventType="touchUpInside" id="8m2-hB-c8X"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                         <constraints>
                             <constraint firstItem="Nw6-uO-4rN" firstAttribute="top" secondItem="XPn-eW-nvc" secondAttribute="bottom" constant="70" id="1IJ-Fw-yC3"/>
+                            <constraint firstItem="Z56-5h-vQn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2fu-BD-U7u"/>
                             <constraint firstItem="DRE-7A-mkX" firstAttribute="top" secondItem="w5Q-Ou-wvm" secondAttribute="bottom" constant="70" id="55W-kB-3NA"/>
+                            <constraint firstItem="w5Q-Ou-wvm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="5mE-hb-5JX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Nw6-uO-4rN" secondAttribute="bottom" constant="168" id="E0r-zF-AX5"/>
-                            <constraint firstItem="DRE-7A-mkX" firstAttribute="leading" secondItem="Z56-5h-vQn" secondAttribute="trailing" constant="9" id="ENm-Er-86H"/>
                             <constraint firstItem="Fzo-u2-APc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="118" id="J4l-ab-Uwp"/>
-                            <constraint firstItem="Z56-5h-vQn" firstAttribute="leading" secondItem="Nw6-uO-4rN" secondAttribute="trailing" constant="10" id="J9e-t3-XGT"/>
                             <constraint firstItem="L8Z-5K-3iJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="100" id="Ojy-qM-nSR"/>
-                            <constraint firstItem="Z56-5h-vQn" firstAttribute="leading" secondItem="XPn-eW-nvc" secondAttribute="trailing" constant="10" id="Ps2-kZ-gTe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Z56-5h-vQn" secondAttribute="bottom" constant="49" id="QFK-ft-rw4"/>
                             <constraint firstItem="Fzo-u2-APc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S56-Ho-cik"/>
-                            <constraint firstItem="Z56-5h-vQn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a2W-sz-usJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Z56-5h-vQn" secondAttribute="bottom" constant="49" id="aam-6E-laJ"/>
+                            <constraint firstItem="DRE-7A-mkX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="Zcf-xC-2vT"/>
+                            <constraint firstItem="Nw6-uO-4rN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="iK9-Mg-DVF"/>
+                            <constraint firstItem="XPn-eW-nvc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="kv7-O8-oFt"/>
                             <constraint firstItem="L8Z-5K-3iJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="41" id="lui-7k-A5m"/>
-                            <constraint firstItem="w5Q-Ou-wvm" firstAttribute="leading" secondItem="Z56-5h-vQn" secondAttribute="trailing" constant="9" id="wbK-I2-Iaz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DRE-7A-mkX" secondAttribute="bottom" constant="168" id="zHp-Vh-Mkb"/>
                         </constraints>
                     </view>
@@ -134,7 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-178.40000000000001" y="57.121439280359823"/>
+            <point key="canvasLocation" x="-178.46153846153845" y="56.872037914691937"/>
         </scene>
     </scenes>
     <resources>
