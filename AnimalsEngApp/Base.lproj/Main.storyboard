@@ -49,6 +49,17 @@
                                     <action selector="BtnSecondPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Shw-cJ-SjH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ia-BB-tgb">
+                                <rect key="frame" x="235" y="562" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Faa-6n-f8e"/>
+                                    <constraint firstAttribute="height" constant="80" id="kwc-lV-bfm"/>
+                                </constraints>
+                                <state key="normal" image="icons8-trotting_horse"/>
+                                <connections>
+                                    <action selector="BtnThirdPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C28-hw-xey"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nw6-uO-4rN">
                                 <rect key="frame" x="75" y="562" width="80" height="80"/>
                                 <constraints>
@@ -95,17 +106,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ia-BB-tgb">
-                                <rect key="frame" x="235" y="562" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="Faa-6n-f8e"/>
-                                    <constraint firstAttribute="height" constant="80" id="kwc-lV-bfm"/>
-                                </constraints>
-                                <state key="normal" image="icons8-trotting_horse"/>
-                                <connections>
-                                    <action selector="BtnThirdPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C28-hw-xey"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondaryLabelColor"/>
