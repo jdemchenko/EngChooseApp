@@ -25,9 +25,14 @@ class ViewController: UIViewController {
     // MARK: - Public Properties
     let animalsImage: [String : UIImage?] = [
         "Pig" : #imageLiteral(resourceName: "icons8-pig"), "Horse" : #imageLiteral(resourceName: "icons8-trotting_horse"), "Elephant" : #imageLiteral(resourceName: "icons8-elephant"),
-        "Sheep" : #imageLiteral(resourceName: "icons8-sheep"), "Rat" : #imageLiteral(resourceName: "icons8-rat_silhouette"), "Bird" : #imageLiteral(resourceName: "icons8-top_view_bird")
+        "Sheep" : #imageLiteral(resourceName: "icons8-sheep"), "Rat" : #imageLiteral(resourceName: "icons8-rat_silhouette"), "Bird" : #imageLiteral(resourceName: "icons8-dove"),
+        
+        "Cat" : #imageLiteral(resourceName: "icons8-pet_commands_stay"), "Cow" : #imageLiteral(resourceName: "icons8-cow"), "Monkey" : #imageLiteral(resourceName: "icons8-harambe_the_gorilla"),
+        "Goat" : #imageLiteral(resourceName: "icons8-year_of_goat"), "Hippopotamus" : #imageLiteral(resourceName: "icons8-hippopotamus")
     ]
-    let animalsName = ["Pig", "Horse", "Elephant", "Sheep", "Rat", "Bird"]
+    var animalsName = [""]
+    
+
     
     var notChooseAnimals = [""]
     var randAnimal = ""
@@ -45,6 +50,7 @@ class ViewController: UIViewController {
     // MARK: Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        animalsName = Array(animalsImage.keys)
         YouWin.isHidden = true
         ScoreCount.text = "0"
         setAnimalText()
@@ -207,7 +213,7 @@ class ViewController: UIViewController {
     }
     
     func checkWinsScores() {
-        if score > 20 {
+        if score > 19 {
             hideElementsOfInterface()
             youWinShow()
         }
