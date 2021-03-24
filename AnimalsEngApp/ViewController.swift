@@ -12,12 +12,16 @@ class ViewController: UIViewController {
     // MARK: - ID Outlets
     @IBOutlet weak var AnimalText: UILabel!
     @IBOutlet weak var ScoreCount: UILabel!
+    @IBOutlet weak var YouWin: UILabel!
     
+    @IBOutlet weak var ScoreStack: UIStackView!
+
     @IBOutlet weak var AnimalBtnFirst: UIButton!
     @IBOutlet weak var AnimalBtnSecond: UIButton!
     @IBOutlet weak var AnimalBtnThird: UIButton!
     @IBOutlet weak var AnimalBtnFour: UIButton!
-
+    @IBOutlet weak var nextBtn: UIButton!
+    
     // MARK: - Public Properties
     let animalsImage: [String : UIImage?] = [
         "Pig" : #imageLiteral(resourceName: "icons8-pig"), "Horse" : #imageLiteral(resourceName: "icons8-trotting_horse"), "Elephant" : #imageLiteral(resourceName: "icons8-elephant"),
@@ -41,6 +45,7 @@ class ViewController: UIViewController {
     // MARK: Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        YouWin.isHidden = true
         ScoreCount.text = "0"
         setAnimalText()
         setArrayWithoutChooseAnimal()
@@ -66,43 +71,36 @@ class ViewController: UIViewController {
       
       
       @IBAction func BtnFirstPress(_ sender: Any) {
-          AnimalText.alpha = 0
-          AnimalText.text = checkFirst
-          animateLabel(chooseWhatsAnimate: AnimalText)
-          btnEnableIsFalse()
-          scoreCheck(check: checkFirst)
+          btnPressAction(whichCheck: checkFirst)
       }
       
       @IBAction func BtnSecondPress(_ sender: Any) {
-          AnimalText.alpha = 0
-          AnimalText.text = checkSecond
-          animateLabel(chooseWhatsAnimate: AnimalText)
-          btnEnableIsFalse()
-          scoreCheck(check: checkSecond)
+          btnPressAction(whichCheck: checkSecond)
       }
       
       
       @IBAction func BtnThirdPress(_ sender: Any) {
-          AnimalText.alpha = 0
-          AnimalText.text = checkThird
-          animateLabel(chooseWhatsAnimate: AnimalText)
-          btnEnableIsFalse()
-          scoreCheck(check: checkThird)
+          btnPressAction(whichCheck: checkThird)
       }
       
       
       @IBAction func BtnFourPress(_ sender: Any) {
-          AnimalText.alpha = 0
-          AnimalText.text = checkFour
-          animateLabel(chooseWhatsAnimate: AnimalText)
-          btnEnableIsFalse()
-          scoreCheck(check: checkFour)
+        btnPressAction(whichCheck: checkFour)
       }
 
     // MARK: - Public Methods
     func setAnimalText() {
         randAnimal = animalsName.randomElement()!
         AnimalText.text = randAnimal
+    }
+    
+    func btnPressAction(whichCheck: String) {
+        AnimalText.alpha = 0
+        AnimalText.text = whichCheck
+        animateLabel(chooseWhatsAnimate: AnimalText)
+        btnEnableIsFalse()
+        scoreCheck(check: whichCheck)
+      checkWinsScores()
     }
     
     func setImage() {
@@ -171,13 +169,13 @@ class ViewController: UIViewController {
     
     
     func animateLabel(chooseWhatsAnimate: UILabel) {
-        UIView.animate(withDuration: 1.5, animations:{
+        UIView.animate(withDuration: 0.5, animations:{
             chooseWhatsAnimate.alpha = 1
         } )
     }
     
     func animateBtn(chooseWhatsAnimate: UIButton) {
-        UIView.animate(withDuration: 1.5, animations:{
+        UIView.animate(withDuration: 0.7, animations:{
             chooseWhatsAnimate.alpha = 1
         } )
     }
@@ -197,6 +195,27 @@ class ViewController: UIViewController {
             score -= 1
         }
         ScoreCount.text = String(score)
+    }
+    
+    func checkWinsScores() {
+        if score > 20 {
+            hideElementsOfInterface()
+            youWinShow()
+        }
+    }
+    
+    func hideElementsOfInterface() {
+        ScoreStack.isHidden = true
+        AnimalText.isHidden = true
+        AnimalBtnFirst.isHidden = true
+        AnimalBtnSecond.isHidden = true
+        AnimalBtnThird.isHidden = true
+        AnimalBtnFour.isHidden = true
+        nextBtn.isHidden = true
+    }
+    
+    func youWinShow() {
+        YouWin.isHidden = false
     }
     
     func hideBtnForAnimation() {

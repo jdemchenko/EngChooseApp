@@ -103,6 +103,12 @@
                                     <action selector="BtnNextPress" destination="BYZ-38-t0r" eventType="touchUpInside" id="8m2-hB-c8X"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Win!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2E-IN-N5w">
+                                <rect key="frame" x="121.66666666666667" y="390" width="146.66666666666663" height="64"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondaryLabelColor"/>
@@ -116,6 +122,8 @@
                             <constraint firstItem="L8Z-5K-3iJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="100" id="Ojy-qM-nSR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Z56-5h-vQn" secondAttribute="bottom" constant="49" id="QFK-ft-rw4"/>
                             <constraint firstItem="Fzo-u2-APc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S56-Ho-cik"/>
+                            <constraint firstItem="D2E-IN-N5w" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UXK-jW-mhU"/>
+                            <constraint firstItem="D2E-IN-N5w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wdd-27-KsL"/>
                             <constraint firstItem="DRE-7A-mkX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="Zcf-xC-2vT"/>
                             <constraint firstItem="Nw6-uO-4rN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="iK9-Mg-DVF"/>
                             <constraint firstItem="XPn-eW-nvc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="kv7-O8-oFt"/>
@@ -130,6 +138,9 @@
                         <outlet property="AnimalBtnThird" destination="DRE-7A-mkX" id="bX7-Qq-ZEj"/>
                         <outlet property="AnimalText" destination="Fzo-u2-APc" id="vpF-G4-LQf"/>
                         <outlet property="ScoreCount" destination="bbg-z4-zCz" id="UPh-rE-nCE"/>
+                        <outlet property="ScoreStack" destination="L8Z-5K-3iJ" id="l9R-Fa-ASQ"/>
+                        <outlet property="YouWin" destination="D2E-IN-N5w" id="AiC-Aq-4Bu"/>
+                        <outlet property="nextBtn" destination="Z56-5h-vQn" id="AI6-BQ-phU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
