@@ -79,10 +79,10 @@ class ViewController: UIViewController {
       }
       
       
-      @IBAction func BtnThirdPress(_ sender: Any) {
-          btnPressAction(whichCheck: checkThird)
-      }
-      
+    @IBAction func BtnThirdPress(_ sender: Any) {
+        btnPressAction(whichCheck: checkThird)
+    }
+    
       
       @IBAction func BtnFourPress(_ sender: Any) {
         btnPressAction(whichCheck: checkFour)
@@ -127,6 +127,7 @@ class ViewController: UIViewController {
             animalOfBtnSecond = notChooseAnimals[1]
             animalOfBtnThird = notChooseAnimals[2]
             animalOfBtnFour = notChooseAnimals[3]
+            
             checkFirst = "Correctly"
             checkSecond = "Not correctly"
             checkThird = "Not correctly"

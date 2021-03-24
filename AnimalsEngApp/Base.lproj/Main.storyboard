@@ -49,20 +49,6 @@
                                     <action selector="BtnSecondPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Shw-cJ-SjH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRE-7A-mkX">
-                                <rect key="frame" x="235" y="562" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="xZr-Ll-pRG"/>
-                                    <constraint firstAttribute="width" constant="80" id="y1i-Ty-WDK"/>
-                                </constraints>
-                                <state key="normal" image="icons8-harambe_the_gorilla">
-                                    <color key="titleColor" systemColor="systemGrayColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="BtnSecondPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JCR-5n-Y9T"/>
-                                    <action selector="BtnThirdPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8i4-xq-Dcv"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nw6-uO-4rN">
                                 <rect key="frame" x="75" y="562" width="80" height="80"/>
                                 <constraints>
@@ -109,13 +95,24 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ia-BB-tgb">
+                                <rect key="frame" x="235" y="562" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Faa-6n-f8e"/>
+                                    <constraint firstAttribute="height" constant="80" id="kwc-lV-bfm"/>
+                                </constraints>
+                                <state key="normal" image="icons8-trotting_horse"/>
+                                <connections>
+                                    <action selector="BtnThirdPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C28-hw-xey"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7ia-BB-tgb" secondAttribute="bottom" constant="168" id="0TB-qW-24M"/>
                             <constraint firstItem="Nw6-uO-4rN" firstAttribute="top" secondItem="XPn-eW-nvc" secondAttribute="bottom" constant="70" id="1IJ-Fw-yC3"/>
                             <constraint firstItem="Z56-5h-vQn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2fu-BD-U7u"/>
-                            <constraint firstItem="DRE-7A-mkX" firstAttribute="top" secondItem="w5Q-Ou-wvm" secondAttribute="bottom" constant="70" id="55W-kB-3NA"/>
                             <constraint firstItem="w5Q-Ou-wvm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="5mE-hb-5JX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Nw6-uO-4rN" secondAttribute="bottom" constant="168" id="E0r-zF-AX5"/>
                             <constraint firstItem="Fzo-u2-APc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="118" id="J4l-ab-Uwp"/>
@@ -124,18 +121,18 @@
                             <constraint firstItem="Fzo-u2-APc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S56-Ho-cik"/>
                             <constraint firstItem="D2E-IN-N5w" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UXK-jW-mhU"/>
                             <constraint firstItem="D2E-IN-N5w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wdd-27-KsL"/>
-                            <constraint firstItem="DRE-7A-mkX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="Zcf-xC-2vT"/>
+                            <constraint firstItem="7ia-BB-tgb" firstAttribute="top" secondItem="w5Q-Ou-wvm" secondAttribute="bottom" constant="70" id="aQC-k7-BDV"/>
+                            <constraint firstItem="7ia-BB-tgb" firstAttribute="leading" secondItem="Z56-5h-vQn" secondAttribute="trailing" constant="14.333333333333343" id="c6p-Hj-qcl"/>
                             <constraint firstItem="Nw6-uO-4rN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="iK9-Mg-DVF"/>
                             <constraint firstItem="XPn-eW-nvc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="kv7-O8-oFt"/>
                             <constraint firstItem="L8Z-5K-3iJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="41" id="lui-7k-A5m"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DRE-7A-mkX" secondAttribute="bottom" constant="168" id="zHp-Vh-Mkb"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="AnimalBtnFirst" destination="XPn-eW-nvc" id="Nav-Lj-SYk"/>
                         <outlet property="AnimalBtnFour" destination="Nw6-uO-4rN" id="KVW-rC-Zzl"/>
                         <outlet property="AnimalBtnSecond" destination="w5Q-Ou-wvm" id="pkD-MO-5b7"/>
-                        <outlet property="AnimalBtnThird" destination="DRE-7A-mkX" id="bX7-Qq-ZEj"/>
+                        <outlet property="AnimalBtnThird" destination="7ia-BB-tgb" id="yW7-x6-0NZ"/>
                         <outlet property="AnimalText" destination="Fzo-u2-APc" id="vpF-G4-LQf"/>
                         <outlet property="ScoreCount" destination="bbg-z4-zCz" id="UPh-rE-nCE"/>
                         <outlet property="ScoreStack" destination="L8Z-5K-3iJ" id="l9R-Fa-ASQ"/>
@@ -150,9 +147,9 @@
     </scenes>
     <resources>
         <image name="icons8-elephant" width="100" height="100"/>
-        <image name="icons8-harambe_the_gorilla" width="100" height="100"/>
         <image name="icons8-hippopotamus" width="100" height="100"/>
         <image name="icons8-sheep" width="100" height="100"/>
+        <image name="icons8-trotting_horse" width="100" height="100"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
