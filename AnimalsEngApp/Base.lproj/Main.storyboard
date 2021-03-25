@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AnimalText" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fzo-u2-APc">
-                                <rect key="frame" x="112.00000000000001" y="162" width="166.33333333333337" height="56"/>
+                                <rect key="frame" x="112" y="162" width="166" height="56"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -50,7 +50,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ia-BB-tgb">
-                                <rect key="frame" x="235" y="562" width="80" height="80"/>
+                                <rect key="frame" x="234.66666666666663" y="562" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="Faa-6n-f8e"/>
                                     <constraint firstAttribute="height" constant="80" id="kwc-lV-bfm"/>
@@ -90,16 +90,6 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z56-5h-vQn">
-                                <rect key="frame" x="169.66666666666666" y="709" width="51" height="52"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="BtnNextPress" destination="BYZ-38-t0r" eventType="touchUpInside" id="8m2-hB-c8X"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Win!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2E-IN-N5w">
                                 <rect key="frame" x="121.66666666666667" y="390" width="146.66666666666663" height="64"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="40"/>
@@ -112,20 +102,21 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7ia-BB-tgb" secondAttribute="bottom" constant="168" id="0TB-qW-24M"/>
                             <constraint firstItem="Nw6-uO-4rN" firstAttribute="top" secondItem="XPn-eW-nvc" secondAttribute="bottom" constant="70" id="1IJ-Fw-yC3"/>
-                            <constraint firstItem="Z56-5h-vQn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2fu-BD-U7u"/>
                             <constraint firstItem="w5Q-Ou-wvm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="5mE-hb-5JX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Nw6-uO-4rN" secondAttribute="bottom" constant="168" id="E0r-zF-AX5"/>
+                            <constraint firstItem="Fzo-u2-APc" firstAttribute="leading" secondItem="Nw6-uO-4rN" secondAttribute="trailing" constant="-42.999999999999986" id="Izi-eU-bsk"/>
                             <constraint firstItem="Fzo-u2-APc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="118" id="J4l-ab-Uwp"/>
+                            <constraint firstItem="7ia-BB-tgb" firstAttribute="leading" secondItem="Fzo-u2-APc" secondAttribute="trailing" constant="-43.333333333333371" id="MQs-Qt-Qot"/>
+                            <constraint firstItem="Fzo-u2-APc" firstAttribute="leading" secondItem="XPn-eW-nvc" secondAttribute="trailing" constant="-43" id="Ob0-eG-bbF"/>
                             <constraint firstItem="L8Z-5K-3iJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="100" id="Ojy-qM-nSR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Z56-5h-vQn" secondAttribute="bottom" constant="49" id="QFK-ft-rw4"/>
                             <constraint firstItem="Fzo-u2-APc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S56-Ho-cik"/>
                             <constraint firstItem="D2E-IN-N5w" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UXK-jW-mhU"/>
                             <constraint firstItem="D2E-IN-N5w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wdd-27-KsL"/>
                             <constraint firstItem="7ia-BB-tgb" firstAttribute="top" secondItem="w5Q-Ou-wvm" secondAttribute="bottom" constant="70" id="aQC-k7-BDV"/>
-                            <constraint firstItem="7ia-BB-tgb" firstAttribute="leading" secondItem="Z56-5h-vQn" secondAttribute="trailing" constant="14.333333333333343" id="c6p-Hj-qcl"/>
                             <constraint firstItem="Nw6-uO-4rN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="iK9-Mg-DVF"/>
                             <constraint firstItem="XPn-eW-nvc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="kv7-O8-oFt"/>
                             <constraint firstItem="L8Z-5K-3iJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="41" id="lui-7k-A5m"/>
+                            <constraint firstItem="w5Q-Ou-wvm" firstAttribute="leading" secondItem="Fzo-u2-APc" secondAttribute="trailing" constant="-43" id="yfQ-2A-Hn3"/>
                         </constraints>
                     </view>
                     <connections>
@@ -137,7 +128,6 @@
                         <outlet property="ScoreCount" destination="bbg-z4-zCz" id="UPh-rE-nCE"/>
                         <outlet property="ScoreStack" destination="L8Z-5K-3iJ" id="l9R-Fa-ASQ"/>
                         <outlet property="YouWin" destination="D2E-IN-N5w" id="AiC-Aq-4Bu"/>
-                        <outlet property="nextBtn" destination="Z56-5h-vQn" id="AI6-BQ-phU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var AnimalBtnSecond: UIButton!
     @IBOutlet weak var AnimalBtnThird: UIButton!
     @IBOutlet weak var AnimalBtnFour: UIButton!
-    @IBOutlet weak var nextBtn: UIButton!
+
     
     // MARK: - Public Properties
     let animalsImage: [String : UIImage?] = [
@@ -60,51 +60,47 @@ class ViewController: UIViewController {
     }
     
     // MARK: ID Action
-    @IBAction func BtnNextPress() {
+    @IBAction func BtnFirstPress(_ sender: Any) {
+        btnPressAction(whichCheck: checkFirst)
+        answerCheck(check: checkFirst, btn: AnimalBtnFirst)
+    }
+    
+    @IBAction func BtnSecondPress(_ sender: Any) {
+        btnPressAction(whichCheck: checkSecond)
+        answerCheck(check: checkSecond, btn: AnimalBtnSecond)
+    }
+    
+    
+    @IBAction func BtnThirdPress(_ sender: Any) {
+        btnPressAction(whichCheck: checkThird)
+        answerCheck(check: checkThird, btn: AnimalBtnThird)
+    }
+    
+    
+    @IBAction func BtnFourPress(_ sender: Any) {
+        btnPressAction(whichCheck: checkFour)
+        answerCheck(check: checkFour, btn: AnimalBtnFour)
+    }
+    
+    // MARK: - Public Methods
+    func next() {
         hideBtnForAnimation()
         AnimalText.alpha = 0
         setAnimalText()
         setArrayWithoutChooseAnimal()
         randBtn()
         setImage()
-        AnimalBtnFirst.isEnabled = true
-        AnimalBtnSecond.isEnabled = true
-        AnimalBtnThird.isEnabled = true
-        AnimalBtnFour.isEnabled = true
+        btnEnableIsTrue()
         animatingBtn()
         animateLabel(chooseWhatsAnimate: AnimalText)
     }
     
-    
-    @IBAction func BtnFirstPress(_ sender: Any) {
-        btnPressAction(whichCheck: checkFirst)
-    }
-    
-    @IBAction func BtnSecondPress(_ sender: Any) {
-        btnPressAction(whichCheck: checkSecond)
-    }
-    
-    
-    @IBAction func BtnThirdPress(_ sender: Any) {
-        btnPressAction(whichCheck: checkThird)
-    }
-    
-    
-    @IBAction func BtnFourPress(_ sender: Any) {
-        btnPressAction(whichCheck: checkFour)
-    }
-    
-    // MARK: - Public Methods
     func setAnimalText() {
         randAnimal = animalsName.randomElement()!
         AnimalText.text = randAnimal
     }
     
     func btnPressAction(whichCheck: String) {
-        AnimalText.alpha = 0
-        AnimalText.text = whichCheck
-        animateLabel(chooseWhatsAnimate: AnimalText)
-        btnEnableIsFalse()
         scoreCheck(check: whichCheck)
         checkWinsScores()
         checkLoseScores()
@@ -189,11 +185,11 @@ class ViewController: UIViewController {
     }
     
     
-    func btnEnableIsFalse() {
-        AnimalBtnFirst.isEnabled = false
-        AnimalBtnSecond.isEnabled = false
-        AnimalBtnThird.isEnabled = false
-        AnimalBtnFour.isEnabled = false
+    func btnEnableIsTrue() {
+        AnimalBtnFirst.isEnabled = true
+        AnimalBtnSecond.isEnabled = true
+        AnimalBtnThird.isEnabled = true
+        AnimalBtnFour.isEnabled = true
     }
     
     func scoreCheck(check: String) {
@@ -203,6 +199,14 @@ class ViewController: UIViewController {
             score -= 1
         }
         ScoreCount.text = String(score)
+    }
+    
+    func answerCheck(check: String, btn: UIButton) {
+        if check == "Correctly" {
+            next()
+        } else {
+            btn.isEnabled = false
+        }
     }
     
     func checkLoseScores() {
@@ -226,7 +230,6 @@ class ViewController: UIViewController {
         AnimalBtnSecond.isHidden = true
         AnimalBtnThird.isHidden = true
         AnimalBtnFour.isHidden = true
-        nextBtn.isHidden = true
     }
     
     func youWinShow() {
