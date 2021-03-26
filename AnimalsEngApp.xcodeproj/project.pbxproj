@@ -13,6 +13,7 @@
 		2DAED46E260949B4001602A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DAED46C260949B4001602A5 /* Main.storyboard */; };
 		2DAED470260949B5001602A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DAED46F260949B5001602A5 /* Assets.xcassets */; };
 		2DAED473260949B5001602A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DAED471260949B5001602A5 /* LaunchScreen.storyboard */; };
+		FA292ECF260E781E006E1495 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA292ECE260E781E006E1495 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2DAED46F260949B5001602A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DAED472260949B5001602A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DAED474260949B5001602A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA292ECE260E781E006E1495 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				2DAED466260949B4001602A5 /* AppDelegate.swift */,
 				2DAED468260949B4001602A5 /* SceneDelegate.swift */,
+				FA292ECE260E781E006E1495 /* MenuViewController.swift */,
 				2DAED46A260949B4001602A5 /* ViewController.swift */,
 				2DAED46C260949B4001602A5 /* Main.storyboard */,
 				2DAED46F260949B5001602A5 /* Assets.xcassets */,
@@ -140,6 +143,7 @@
 				2DAED46B260949B4001602A5 /* ViewController.swift in Sources */,
 				2DAED467260949B4001602A5 /* AppDelegate.swift in Sources */,
 				2DAED469260949B4001602A5 /* SceneDelegate.swift in Sources */,
+				FA292ECF260E781E006E1495 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

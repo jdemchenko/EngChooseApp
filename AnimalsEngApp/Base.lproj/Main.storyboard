@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gGp-HT-VwA">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -96,6 +96,19 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBN-ww-7QS">
+                                <rect key="frame" x="10" y="41" width="66" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="Ecl-xA-YTz"/>
+                                    <constraint firstAttribute="height" constant="32" id="JV2-57-Sdy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title=" Back" image="arrow.uturn.backward" catalog="system"/>
+                                <connections>
+                                    <segue destination="gGp-HT-VwA" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="JnM-SL-LOK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondaryLabelColor"/>
@@ -105,9 +118,12 @@
                             <constraint firstItem="w5Q-Ou-wvm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="5mE-hb-5JX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Nw6-uO-4rN" secondAttribute="bottom" constant="168" id="E0r-zF-AX5"/>
                             <constraint firstItem="Fzo-u2-APc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="118" id="J4l-ab-Uwp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="XBN-ww-7QS" secondAttribute="top" constant="3" id="Oby-nd-LIs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XBN-ww-7QS" secondAttribute="trailing" symbolic="YES" id="Ohb-BJ-gau"/>
                             <constraint firstItem="L8Z-5K-3iJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="100" id="Ojy-qM-nSR"/>
                             <constraint firstItem="Fzo-u2-APc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S56-Ho-cik"/>
                             <constraint firstItem="D2E-IN-N5w" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UXK-jW-mhU"/>
+                            <constraint firstItem="XBN-ww-7QS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="VTq-Lg-gw8"/>
                             <constraint firstItem="7ia-BB-tgb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="VUq-qv-g7d"/>
                             <constraint firstItem="D2E-IN-N5w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wdd-27-KsL"/>
                             <constraint firstItem="7ia-BB-tgb" firstAttribute="top" secondItem="w5Q-Ou-wvm" secondAttribute="bottom" constant="70" id="aQC-k7-BDV"/>
@@ -129,10 +145,63 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-178.46153846153845" y="56.872037914691937"/>
+            <point key="canvasLocation" x="-443.07692307692304" y="-768.48341232227483"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="fm9-L4-OPG">
+            <objects>
+                <viewController id="gGp-HT-VwA" customClass="MenuViewController" customModule="AnimalsEngApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gs9-Hk-AdV">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOQ-Vj-Nxh">
+                                <rect key="frame" x="112" y="348" width="166" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                <state key="normal" title="Animals">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="animalPackBtn:" destination="T6g-yQ-2KK" eventType="touchUpInside" id="xWB-w0-HTJ"/>
+                                    <action selector="animalPackBtnPressed" destination="gGp-HT-VwA" eventType="touchUpInside" id="IvP-QW-IBj"/>
+                                    <segue destination="BYZ-38-t0r" kind="modal" identifier="animalPackIdentifire" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="PbE-uh-Df8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aa1-qL-Dv7">
+                                <rect key="frame" x="112" y="462" width="166" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                <state key="normal" title="Flags">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="flagsPackBtnPressed" destination="gGp-HT-VwA" eventType="touchUpInside" id="jAX-zx-5BR"/>
+                                    <segue destination="BYZ-38-t0r" kind="modal" identifier="flagsPackIdentifire" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="F5P-ya-xIK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="f6g-5M-5Ax"/>
+                        <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="animalPackBtn" destination="dOQ-Vj-Nxh" id="nuV-PM-fub"/>
+                        <outlet property="flagsPackBtn" destination="aa1-qL-Dv7" id="qqj-qs-3Wu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m8c-Ar-ews" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="T6g-yQ-2KK" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-1369.2307692307693" y="51.895734597156398"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="PbE-uh-Df8"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="arrow.uturn.backward" catalog="system" width="128" height="112"/>
         <image name="icons8-elephant" width="100" height="100"/>
         <image name="icons8-hippopotamus" width="100" height="100"/>
         <image name="icons8-sheep" width="100" height="100"/>

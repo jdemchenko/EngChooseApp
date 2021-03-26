@@ -20,19 +20,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var AnimalBtnSecond: UIButton!
     @IBOutlet weak var AnimalBtnThird: UIButton!
     @IBOutlet weak var AnimalBtnFour: UIButton!
-
+    
+    
+    
     
     // MARK: - Public Properties
-    let animalsImage: [String : UIImage?] = [
-        "Pig" : #imageLiteral(resourceName: "icons8-pig"), "Horse" : #imageLiteral(resourceName: "icons8-trotting_horse"), "Elephant" : #imageLiteral(resourceName: "icons8-elephant"),
-        "Sheep" : #imageLiteral(resourceName: "icons8-sheep"), "Rat" : #imageLiteral(resourceName: "icons8-rat_silhouette"), "Bird" : #imageLiteral(resourceName: "icons8-dove"),
-        
-        "Cat" : #imageLiteral(resourceName: "icons8-pet_commands_stay"), "Cow" : #imageLiteral(resourceName: "icons8-cow"), "Monkey" : #imageLiteral(resourceName: "icons8-harambe_the_gorilla"),
-        "Goat" : #imageLiteral(resourceName: "icons8-year_of_goat"), "Hippopotamus" : #imageLiteral(resourceName: "icons8-hippopotamus")
-    ]
+    var animalsImage: [String : UIImage?] = [:]
     var animalsName = [""]
     
-
+    
     
     var notChooseAnimals = [""]
     var randAnimal = ""
@@ -47,9 +43,12 @@ class ViewController: UIViewController {
     var checkThird = "Not correctly"
     var checkFour = "Not correctly"
     
+    var checkPack = ""
+    
     // MARK: Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        choosePack()
         animalsName = Array(animalsImage.keys)
         YouWin.isHidden = true
         ScoreCount.text = "0"
@@ -58,6 +57,10 @@ class ViewController: UIViewController {
         randBtn()
         setImage()
     }
+    
+    
+    
+    
     
     // MARK: ID Action
     @IBAction func BtnFirstPress(_ sender: Any) {
@@ -82,7 +85,48 @@ class ViewController: UIViewController {
         answerCheck(check: checkFour, btn: AnimalBtnFour)
     }
     
+    
     // MARK: - Public Methods
+    func choosePack() {
+        switch checkPack {
+        case "animalsPack":
+            animalsImage = [
+                "Pig" : #imageLiteral(resourceName: "icons8-pig"), "Horse" : #imageLiteral(resourceName: "icons8-trotting_horse"), "Elephant" : #imageLiteral(resourceName: "icons8-elephant"),
+                "Sheep" : #imageLiteral(resourceName: "icons8-sheep"), "Rat" : #imageLiteral(resourceName: "icons8-rat_silhouette"), "Bird" : #imageLiteral(resourceName: "icons8-dove"),
+                
+                "Cat" : #imageLiteral(resourceName: "icons8-pet_commands_stay"), "Cow" : #imageLiteral(resourceName: "icons8-cow"), "Monkey" : #imageLiteral(resourceName: "icons8-harambe_the_gorilla"),
+                "Goat" : #imageLiteral(resourceName: "icons8-year_of_goat"), "Hippopotamus" : #imageLiteral(resourceName: "icons8-hippopotamus")
+            ]
+        case "flagsPack":
+            animalsImage = [
+                "Afganistan" : #imageLiteral(resourceName: "icons8-afghanistan"), "Bahrain" : #imageLiteral(resourceName: "icons8-bahrain"), "Brunei" : #imageLiteral(resourceName: "icons8-brunei"),
+                "Alands Islands" : #imageLiteral(resourceName: "icons8-aland_islands"), "Albania" : #imageLiteral(resourceName: "icons8-albania"), "Angola" : #imageLiteral(resourceName: "icons8-angola"),
+                "Antarctica" : #imageLiteral(resourceName: "icons8-antarctica"), "Aruba" : #imageLiteral(resourceName: "icons8-aruba"), "Azerbaijan" : #imageLiteral(resourceName: "icons8-azerbaijan"),
+                "Barbados" : #imageLiteral(resourceName: "icons8-barbados"), "Belarus" : #imageLiteral(resourceName: "icons8-belarus"), "Belgium" : #imageLiteral(resourceName: "icons8-belgium"),
+                "Bosnia Herzegovina" : #imageLiteral(resourceName: "icons8-bosnia_herzegovina"), "Bulgaria" : #imageLiteral(resourceName: "icons8-bulgaria"), "Burkina Faso" : #imageLiteral(resourceName: "icons8-burkina_faso"),
+                "Cape Verde" : #imageLiteral(resourceName: "icons8-cape_verde"), "Caribbean Netherlands" : #imageLiteral(resourceName: "icons8-caribbean_netherlands"), "Central African Republic" : #imageLiteral(resourceName: "icons8-central_african_republic"),
+                "Christmas Island" : #imageLiteral(resourceName: "icons8-christmas_island"), "France" : #imageLiteral(resourceName: "icons8-clipperton_island"), "Cocos Keeling Islands" : #imageLiteral(resourceName: "icons8-cocos_keeling_islands"),
+                "Costa Rica" : #imageLiteral(resourceName: "icons8-costa_rica"), "Cuba" : #imageLiteral(resourceName: "icons8-cuba"), "Cyprus" : #imageLiteral(resourceName: "icons8-cyprus"),
+                "Dominica" : #imageLiteral(resourceName: "icons8-dominica"), "Dominican Republic" : #imageLiteral(resourceName: "icons8-dominican_republic"), "Ecuador" : #imageLiteral(resourceName: "icons8-ecuador"),
+                "Ethiopia" : #imageLiteral(resourceName: "icons8-ethiopia"), "European Union" : #imageLiteral(resourceName: "icons8-european_union"), "Germany" : #imageLiteral(resourceName: "icons8-germany"),
+                "Mexico" : #imageLiteral(resourceName: "icons8-mexico"), "Switzerland" : #imageLiteral(resourceName: "icons8-switzerland"), "United Arab Emirates" : #imageLiteral(resourceName: "icons8-united_arab_emirates"),
+                "United States of America" : #imageLiteral(resourceName: "icons8-united_states"), "Algeria" : #imageLiteral(resourceName: "icons8-algeria"), "American Samoa" : #imageLiteral(resourceName: "icons8-american_samoa"),
+                "Andorra" : #imageLiteral(resourceName: "icons8-andorra"), "Argentina" : #imageLiteral(resourceName: "icons8-argentina"), "Armenia" : #imageLiteral(resourceName: "icons8-armenia"),
+                "Bahamas" : #imageLiteral(resourceName: "icons8-bahamas"), "Bangladesh" : #imageLiteral(resourceName: "icons8-bangladesh"), "Belize" : #imageLiteral(resourceName: "icons8-belize"),
+                "Benin" : #imageLiteral(resourceName: "icons8-benin"), "Bermuda" : #imageLiteral(resourceName: "icons8-bermuda"), "Botswana" : #imageLiteral(resourceName: "icons8-botswana"),
+                "Bouvet Island" : #imageLiteral(resourceName: "icons8-bouvet_island"), "Brazil" : #imageLiteral(resourceName: "icons8-brazil"), "Burundi" : #imageLiteral(resourceName: "icons8-burundi"),
+                "Cameroon" : #imageLiteral(resourceName: "icons8-cameroon"), "Canada" : #imageLiteral(resourceName: "icons8-canada"), "Bolivia" : #imageLiteral(resourceName: "icons8-bolivia"),
+                "Chile" : #imageLiteral(resourceName: "icons8-chile"), "China" : #imageLiteral(resourceName: "icons8-china"), "Colombia" : #imageLiteral(resourceName: "icons8-colombia"),
+                "Czechia" : #imageLiteral(resourceName: "icons8-czechia"), "Djibouti" : #imageLiteral(resourceName: "icons8-djibouti"), "Egypt" : #imageLiteral(resourceName: "icons8-egypt"),
+                "Eritrea" : #imageLiteral(resourceName: "icons8-eritrea"), "Estonia" : #imageLiteral(resourceName: "icons8-estonia"), "Faroe Islands" : #imageLiteral(resourceName: "icons8-faroe_islands"),
+                "Fiji" : #imageLiteral(resourceName: "icons8-fiji"), "Finland" : #imageLiteral(resourceName: "icons8-finland"), "Micronesia" : #imageLiteral(resourceName: "icons8-micronesia"),
+                "St. Barthelemy" : #imageLiteral(resourceName: "icons8-st_barthelemy"), "Spain" : #imageLiteral(resourceName: "icons8-ceuta_melilla"),
+            ]
+        default:
+            break
+        }
+    }
+    
     func next() {
         hideBtnForAnimation()
         AnimalText.alpha = 0
