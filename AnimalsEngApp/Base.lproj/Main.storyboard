@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPn-eW-nvc">
-                                <rect key="frame" x="75" y="412" width="80" height="80"/>
+                                <rect key="frame" x="75" y="450" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="aLP-z0-Y54"/>
                                     <constraint firstAttribute="height" constant="80" id="zr0-qh-TJX"/>
@@ -37,7 +37,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5Q-Ou-wvm">
-                                <rect key="frame" x="235" y="412" width="80" height="80"/>
+                                <rect key="frame" x="235" y="450" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="7pw-3U-wWq"/>
                                     <constraint firstAttribute="width" constant="80" id="ZFe-BQ-HyR"/>
@@ -50,7 +50,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ia-BB-tgb">
-                                <rect key="frame" x="235" y="562" width="80" height="80"/>
+                                <rect key="frame" x="235" y="600" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="Faa-6n-f8e"/>
                                     <constraint firstAttribute="height" constant="80" id="kwc-lV-bfm"/>
@@ -61,7 +61,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nw6-uO-4rN">
-                                <rect key="frame" x="75" y="562" width="80" height="80"/>
+                                <rect key="frame" x="75" y="600" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="1TH-xg-VTy"/>
                                     <constraint firstAttribute="width" constant="80" id="BqL-GX-DUn"/>
@@ -97,34 +97,34 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBN-ww-7QS">
-                                <rect key="frame" x="10" y="41" width="66" height="32"/>
+                                <rect key="frame" x="10" y="41" width="73" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="JV2-57-Sdy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title=" Back" image="arrow.uturn.backward" catalog="system"/>
+                                <state key="normal" title="Back" image="icons8-back-96"/>
                                 <connections>
-                                    <segue destination="gGp-HT-VwA" kind="modal" identifier="menuViewIdentifire" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="JnM-SL-LOK"/>
+                                    <segue destination="gGp-HT-VwA" kind="presentation" identifier="menuViewIdentifire" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="JnM-SL-LOK"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Iqu-BQ-9vq" userLabel="Lifes Stack ">
-                                <rect key="frame" x="224.66666666666666" y="47" width="106.66666666666666" height="20.333333333333329"/>
+                                <rect key="frame" x="262" y="47" width="106.66666666666669" height="20.333333333333329"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MlE-Zn-DJV">
-                                        <rect key="frame" x="0.0" y="1.5" width="20.666666666666668" height="17.833333333333336"/>
+                                        <rect key="frame" x="0.0" y="1.9999999999999982" width="20.666666666666668" height="17.333333333333336"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uUJ-Sm-Jc5">
-                                        <rect key="frame" x="28.666666666666686" y="1.5" width="20.666666666666671" height="17.833333333333336"/>
+                                        <rect key="frame" x="28.666666666666686" y="1.9999999999999982" width="20.666666666666671" height="17.333333333333336"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="71q-kN-9uB">
-                                        <rect key="frame" x="57.333333333333336" y="1.5" width="20.666666666666664" height="17.833333333333336"/>
+                                        <rect key="frame" x="57.333333333333307" y="1.9999999999999982" width="20.666666666666664" height="17.333333333333336"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dWx-f9-yBj">
-                                        <rect key="frame" x="86.000000000000028" y="1.5" width="20.666666666666671" height="17.833333333333336"/>
+                                        <rect key="frame" x="86" y="1.9999999999999982" width="20.666666666666671" height="17.333333333333336"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                 </subviews>
@@ -133,10 +133,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7ia-BB-tgb" secondAttribute="bottom" constant="168" id="0TB-qW-24M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7ia-BB-tgb" secondAttribute="bottom" constant="130" id="0TB-qW-24M"/>
                             <constraint firstItem="Nw6-uO-4rN" firstAttribute="top" secondItem="XPn-eW-nvc" secondAttribute="bottom" constant="70" id="1IJ-Fw-yC3"/>
                             <constraint firstItem="w5Q-Ou-wvm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="5mE-hb-5JX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Nw6-uO-4rN" secondAttribute="bottom" constant="168" id="E0r-zF-AX5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Nw6-uO-4rN" secondAttribute="bottom" constant="130" id="E0r-zF-AX5"/>
                             <constraint firstItem="Iqu-BQ-9vq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="3" id="EE8-sV-UlM"/>
                             <constraint firstItem="Fzo-u2-APc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="118" id="J4l-ab-Uwp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="XBN-ww-7QS" secondAttribute="top" constant="3" id="Oby-nd-LIs"/>
@@ -148,12 +148,13 @@
                             <constraint firstItem="7ia-BB-tgb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="VUq-qv-g7d"/>
                             <constraint firstItem="D2E-IN-N5w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wdd-27-KsL"/>
                             <constraint firstItem="7ia-BB-tgb" firstAttribute="top" secondItem="w5Q-Ou-wvm" secondAttribute="bottom" constant="70" id="aQC-k7-BDV"/>
-                            <constraint firstItem="Iqu-BQ-9vq" firstAttribute="leading" secondItem="gqf-3F-5rA" secondAttribute="trailing" constant="-60" id="b6Y-AB-frX"/>
                             <constraint firstItem="Nw6-uO-4rN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="iK9-Mg-DVF"/>
                             <constraint firstItem="XPn-eW-nvc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="kv7-O8-oFt"/>
                             <constraint firstItem="L8Z-5K-3iJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="41" id="lui-7k-A5m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Iqu-BQ-9vq" secondAttribute="trailing" constant="21.333333333333314" id="xHr-Sb-8Y1"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="aHS-ax-s3g"/>
                     <connections>
                         <outlet property="AnimalBtnFirst" destination="XPn-eW-nvc" id="Nav-Lj-SYk"/>
                         <outlet property="AnimalBtnFour" destination="Nw6-uO-4rN" id="KVW-rC-Zzl"/>
@@ -229,7 +230,7 @@
                                                     <action selector="animalPackBtn:" destination="T6g-yQ-2KK" eventType="touchUpInside" id="5AF-sg-T0Q"/>
                                                     <action selector="animalPackBtnPressed" destination="gGp-HT-VwA" eventType="touchUpInside" id="34e-l9-Ynn"/>
                                                     <action selector="clothesPackBtnPressed" destination="gGp-HT-VwA" eventType="touchUpInside" id="58F-0P-jds"/>
-                                                    <segue destination="BYZ-38-t0r" kind="modal" identifier="clothesPackidentifire" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="gWS-MF-3lv"/>
+                                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="clothesPackidentifire" modalPresentationStyle="fullScreen" id="gWS-MF-3lv"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOQ-Vj-Nxh">
@@ -242,7 +243,7 @@
                                                 <connections>
                                                     <action selector="animalPackBtn:" destination="T6g-yQ-2KK" eventType="touchUpInside" id="xWB-w0-HTJ"/>
                                                     <action selector="animalPackBtnPressed" destination="gGp-HT-VwA" eventType="touchUpInside" id="IvP-QW-IBj"/>
-                                                    <segue destination="BYZ-38-t0r" kind="modal" identifier="animalPackIdentifire" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="PbE-uh-Df8"/>
+                                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="animalPackIdentifire" modalPresentationStyle="fullScreen" id="PbE-uh-Df8"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aa1-qL-Dv7">
@@ -254,7 +255,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="flagsPackBtnPressed" destination="gGp-HT-VwA" eventType="touchUpInside" id="jAX-zx-5BR"/>
-                                                    <segue destination="BYZ-38-t0r" kind="modal" identifier="flagsPackIdentifire" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="F5P-ya-xIK"/>
+                                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="flagsPackIdentifire" modalPresentationStyle="fullScreen" id="F5P-ya-xIK"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -291,8 +292,8 @@
         <segue reference="F5P-ya-xIK"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="arrow.uturn.backward" catalog="system" width="128" height="112"/>
         <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="icons8-back-96" width="32" height="32"/>
         <image name="icons8-elephant" width="100" height="100"/>
         <image name="icons8-hippopotamus" width="100" height="100"/>
         <image name="icons8-sheep" width="100" height="100"/>
