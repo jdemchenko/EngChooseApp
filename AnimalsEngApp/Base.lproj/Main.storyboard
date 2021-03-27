@@ -112,19 +112,19 @@
                                 <rect key="frame" x="224.66666666666666" y="47" width="106.66666666666666" height="20.333333333333329"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MlE-Zn-DJV">
-                                        <rect key="frame" x="0.0" y="1.9999999999999982" width="20.666666666666668" height="17.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="1.5" width="20.666666666666668" height="17.833333333333336"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uUJ-Sm-Jc5">
-                                        <rect key="frame" x="28.666666666666686" y="1.9999999999999982" width="20.666666666666671" height="17.333333333333336"/>
+                                        <rect key="frame" x="28.666666666666686" y="1.5" width="20.666666666666671" height="17.833333333333336"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="71q-kN-9uB">
-                                        <rect key="frame" x="57.333333333333336" y="1.9999999999999982" width="20.666666666666664" height="17.333333333333336"/>
+                                        <rect key="frame" x="57.333333333333336" y="1.5" width="20.666666666666664" height="17.833333333333336"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dWx-f9-yBj">
-                                        <rect key="frame" x="86.000000000000028" y="1.9999999999999982" width="20.666666666666671" height="17.333333333333336"/>
+                                        <rect key="frame" x="86.000000000000028" y="1.5" width="20.666666666666671" height="17.833333333333336"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                 </subviews>
@@ -182,80 +182,97 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOQ-Vj-Nxh">
-                                <rect key="frame" x="112" y="446" width="166" height="78"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
-                                <state key="normal" title="Animals">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="animalPackBtn:" destination="T6g-yQ-2KK" eventType="touchUpInside" id="xWB-w0-HTJ"/>
-                                    <action selector="animalPackBtnPressed" destination="gGp-HT-VwA" eventType="touchUpInside" id="IvP-QW-IBj"/>
-                                    <segue destination="BYZ-38-t0r" kind="modal" identifier="animalPackIdentifire" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="PbE-uh-Df8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aa1-qL-Dv7">
-                                <rect key="frame" x="112" y="560" width="166" height="78"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
-                                <state key="normal" title="Flags">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="flagsPackBtnPressed" destination="gGp-HT-VwA" eventType="touchUpInside" id="jAX-zx-5BR"/>
-                                    <segue destination="BYZ-38-t0r" kind="modal" identifier="flagsPackIdentifire" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="F5P-ya-xIK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHc-3Y-ScE">
-                                <rect key="frame" x="112" y="321" width="166" height="78"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
-                                <state key="normal" title="Clothing">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="animalPackBtn:" destination="T6g-yQ-2KK" eventType="touchUpInside" id="5AF-sg-T0Q"/>
-                                    <action selector="animalPackBtnPressed" destination="gGp-HT-VwA" eventType="touchUpInside" id="34e-l9-Ynn"/>
-                                    <action selector="clothesPackBtnPressed" destination="gGp-HT-VwA" eventType="touchUpInside" id="58F-0P-jds"/>
-                                    <segue destination="BYZ-38-t0r" kind="modal" identifier="clothesPackidentifire" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="gWS-MF-3lv"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Theme Of Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRM-si-cqa">
-                                <rect key="frame" x="73" y="207" width="245" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="35"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Noir" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yr-gq-7rh">
-                                <rect key="frame" x="132" y="740" width="28" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PG-36-3BP">
-                                <rect key="frame" x="227" y="740" width="36" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ygj-yC-BES">
-                                <rect key="frame" x="168" y="737" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="onTintColor" red="0.92700950386597936" green="0.45684833773183292" blue="0.61925421981539708" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <connections>
-                                    <action selector="colorSwitchSwitch" destination="gGp-HT-VwA" eventType="valueChanged" id="Xnn-e3-g6S"/>
-                                </connections>
-                            </switch>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3YC-lk-mxA">
+                                <rect key="frame" x="129" y="740" width="132" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noir" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yr-gq-7rh">
+                                        <rect key="frame" x="0.0" y="0.0" width="27.666666666666668" height="31"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ygj-yC-BES">
+                                        <rect key="frame" x="37.666666666666657" y="0.0" width="51" height="31"/>
+                                        <color key="onTintColor" red="0.92700950386597936" green="0.45684833773183292" blue="0.61925421981539708" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="colorSwitchSwitch" destination="gGp-HT-VwA" eventType="valueChanged" id="Xnn-e3-g6S"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PG-36-3BP">
+                                        <rect key="frame" x="96.666666666666657" y="0.0" width="35.333333333333343" height="31"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="71" translatesAutoresizingMaskIntoConstraints="NO" id="T0j-5K-mha">
+                                <rect key="frame" x="72.666666666666686" y="227.66666666666663" width="245" height="389"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theme Of Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRM-si-cqa">
+                                        <rect key="frame" x="0.0" y="0.0" width="245" height="56"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="01Z-fH-QMi">
+                                        <rect key="frame" x="48.666666666666657" y="127" width="147.33333333333334" height="262"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHc-3Y-ScE">
+                                                <rect key="frame" x="0.0" y="0.0" width="147.33333333333334" height="60"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                                <state key="normal" title="Clothing">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="animalPackBtn:" destination="T6g-yQ-2KK" eventType="touchUpInside" id="5AF-sg-T0Q"/>
+                                                    <action selector="animalPackBtnPressed" destination="gGp-HT-VwA" eventType="touchUpInside" id="34e-l9-Ynn"/>
+                                                    <action selector="clothesPackBtnPressed" destination="gGp-HT-VwA" eventType="touchUpInside" id="58F-0P-jds"/>
+                                                    <segue destination="BYZ-38-t0r" kind="modal" identifier="clothesPackidentifire" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="gWS-MF-3lv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOQ-Vj-Nxh">
+                                                <rect key="frame" x="0.0" y="101" width="147.33333333333334" height="60"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                                <state key="normal" title="Animals">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="animalPackBtn:" destination="T6g-yQ-2KK" eventType="touchUpInside" id="xWB-w0-HTJ"/>
+                                                    <action selector="animalPackBtnPressed" destination="gGp-HT-VwA" eventType="touchUpInside" id="IvP-QW-IBj"/>
+                                                    <segue destination="BYZ-38-t0r" kind="modal" identifier="animalPackIdentifire" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="PbE-uh-Df8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aa1-qL-Dv7">
+                                                <rect key="frame" x="0.0" y="201.99999999999994" width="147.33333333333334" height="60"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                                <state key="normal" title="Flags">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="flagsPackBtnPressed" destination="gGp-HT-VwA" eventType="touchUpInside" id="jAX-zx-5BR"/>
+                                                    <segue destination="BYZ-38-t0r" kind="modal" identifier="flagsPackIdentifire" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="F5P-ya-xIK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="aa1-qL-Dv7" firstAttribute="width" secondItem="01Z-fH-QMi" secondAttribute="height" multiplier="83:422" constant="95.784360189573462" id="oYd-TN-HEL"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="f6g-5M-5Ax"/>
                         <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                        <constraints>
+                            <constraint firstItem="T0j-5K-mha" firstAttribute="centerX" secondItem="Gs9-Hk-AdV" secondAttribute="centerX" id="3Pj-0h-NFw"/>
+                            <constraint firstItem="3YC-lk-mxA" firstAttribute="centerX" secondItem="Gs9-Hk-AdV" secondAttribute="centerX" id="L7o-t4-Jfu"/>
+                            <constraint firstItem="f6g-5M-5Ax" firstAttribute="bottom" secondItem="3YC-lk-mxA" secondAttribute="bottom" constant="39" id="OSX-KX-sDY"/>
+                            <constraint firstItem="T0j-5K-mha" firstAttribute="centerY" secondItem="Gs9-Hk-AdV" secondAttribute="centerY" id="wX5-vf-xhd"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="animalPackBtn" destination="dOQ-Vj-Nxh" id="nuV-PM-fub"/>
@@ -271,7 +288,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gWS-MF-3lv"/>
+        <segue reference="F5P-ya-xIK"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.uturn.backward" catalog="system" width="128" height="112"/>
