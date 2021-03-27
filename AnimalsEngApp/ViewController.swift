@@ -70,7 +70,11 @@ class ViewController: UIViewController {
         setImage()
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "menuViewIdentifire" else { return }
+        guard let destination = segue.destination as? MenuViewController else { return }
+        destination.checkSwitch = checkSwitch
+    }
     
     
     

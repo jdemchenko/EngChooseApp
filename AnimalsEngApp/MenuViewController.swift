@@ -21,11 +21,12 @@ class MenuViewController: UIViewController {
     var identifire = ""
     
     var backgroundColor = #colorLiteral(red: 0.9103912711, green: 0.7921295762, blue: 0.5059833527, alpha: 1)
-    var BtnColor = #colorLiteral(red: 0.9962832332, green: 0.4213231802, blue: 0.6217779517, alpha: 1)
+    var btnColor = #colorLiteral(red: 0.9962832332, green: 0.4213231802, blue: 0.6217779517, alpha: 1)
     var checkSwitch = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkSwitchOn()
         switchColor()
         buttonCornerRadius()
     }
@@ -35,7 +36,7 @@ class MenuViewController: UIViewController {
         guard let destination = segue.destination as? ViewController else { return }
         destination.checkPack = check
         destination.backgroundColor = backgroundColor
-        destination.btnColor = BtnColor
+        destination.btnColor = btnColor
         destination.checkSwitch = checkSwitch
     }
     
@@ -64,24 +65,27 @@ class MenuViewController: UIViewController {
         clothesPackBtn.layer.cornerRadius = cornerRadius
     }
     
-    
-    
+    func checkSwitchOn() {
+        if checkSwitch {
+            colorSwitch.isOn = true
+        }
+    }
     
     func switchColor() {
         if colorSwitch.isOn {
             backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-            BtnColor = #colorLiteral(red: 0.9962832332, green: 0.4213231802, blue: 0.6217779517, alpha: 1)
+            btnColor = #colorLiteral(red: 0.9962832332, green: 0.4213231802, blue: 0.6217779517, alpha: 1)
             checkSwitch = true
         }
         else {
             backgroundColor = #colorLiteral(red: 0.1411584616, green: 0.141189754, blue: 0.1582941115, alpha: 1)
-            BtnColor = #colorLiteral(red: 0.3332971931, green: 0.3333585858, blue: 0.3332890868, alpha: 1)
+            btnColor = #colorLiteral(red: 0.3332971931, green: 0.3333585858, blue: 0.3332890868, alpha: 1)
             checkSwitch = false
         }
         view.backgroundColor = backgroundColor
-        animalPackBtn.backgroundColor = BtnColor
-        clothesPackBtn.backgroundColor = BtnColor
-        flagsPackBtn.backgroundColor = BtnColor
+        animalPackBtn.backgroundColor = btnColor
+        clothesPackBtn.backgroundColor = btnColor
+        flagsPackBtn.backgroundColor = btnColor
     }
     /*
      // MARK: - Navigation

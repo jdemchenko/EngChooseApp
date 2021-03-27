@@ -105,7 +105,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title=" Back" image="arrow.uturn.backward" catalog="system"/>
                                 <connections>
-                                    <segue destination="gGp-HT-VwA" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="JnM-SL-LOK"/>
+                                    <segue destination="gGp-HT-VwA" kind="modal" identifier="menuViewIdentifire" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="JnM-SL-LOK"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Iqu-BQ-9vq" userLabel="Lifes Stack ">
