@@ -4,8 +4,8 @@
 //
 //  Created by Ivan Demchenko on 3/23/21.
 //
-
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -55,6 +55,9 @@ class ViewController: UIViewController {
     var backgroundColor = #colorLiteral(red: 0.1411584616, green: 0.141189754, blue: 0.1582941115, alpha: 1)
     var btnColor = #colorLiteral(red: 0.3332971931, green: 0.3333585858, blue: 0.3332890868, alpha: 1)
     var checkSwitch = false
+    
+    var utterance = AVSpeechUtterance(string: "Error")
+    let synthesizer = AVSpeechSynthesizer()
     
     // MARK: Life Cycles Methods
     override func viewDidLoad() {
@@ -195,6 +198,9 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    
+    
     func next() {
         hideBtnForAnimation()
         AnimalText.alpha = 0
@@ -309,6 +315,7 @@ class ViewController: UIViewController {
         if check == "Correctly" {
             score += 1
             answersWithoutMistakes += 1
+            textToSpeech(text: AnimalText.text ?? "Error")
         } else {
             life -= 1
             answersWithoutMistakes = 0
@@ -368,7 +375,6 @@ class ViewController: UIViewController {
     
     func switchColor() {
         view.backgroundColor = backgroundColor
-        YouWin.textColor = btnColor
         if checkSwitch {
             heartOne.tintColor = .red
             heartTwo.tintColor = .red
@@ -380,6 +386,13 @@ class ViewController: UIViewController {
             heartThree.tintColor = .white
             heartFour.tintColor = .white
         }
+    }
+    
+    func textToSpeech(text: String) {
+        utterance = AVSpeechUtterance(string: text)
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-en")
+        utterance.rate = 0.4
+        synthesizer.speak(utterance)
     }
     
 }

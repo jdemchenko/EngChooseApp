@@ -21,7 +21,6 @@
                                 <rect key="frame" x="110.00000000000001" y="390" width="170.33333333333337" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="64" id="Ocb-Sr-No2"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="236" id="ofx-bl-zZ6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

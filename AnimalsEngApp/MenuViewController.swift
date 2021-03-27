@@ -4,7 +4,6 @@
 //
 //  Created by macbook on 26.03.21.
 //
-
 import UIKit
 
 class MenuViewController: UIViewController {
@@ -55,7 +54,8 @@ class MenuViewController: UIViewController {
     @IBAction func colorSwitchSwitch() {
         switchColor()
     }
-    
+        
+
     
     
     func buttonCornerRadius() {
