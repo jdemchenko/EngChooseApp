@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var AnimalBtnSecond: UIButton!
     @IBOutlet weak var AnimalBtnThird: UIButton!
     @IBOutlet weak var AnimalBtnFour: UIButton!
+    @IBOutlet weak var backBtn: UIButton!
     
     
     
@@ -51,10 +52,14 @@ class ViewController: UIViewController {
     var checkFour = "Not correctly"
     
     var checkPack = ""
+    var backgroundColor = #colorLiteral(red: 0.1411584616, green: 0.141189754, blue: 0.1582941115, alpha: 1)
+    var btnColor = #colorLiteral(red: 0.3332971931, green: 0.3333585858, blue: 0.3332890868, alpha: 1)
+    var checkSwitch = false
     
     // MARK: Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        switchColor()
         choosePack()
         animalsName = Array(animalsImage.keys)
         YouWin.isHidden = true
@@ -121,6 +126,8 @@ class ViewController: UIViewController {
             life = 4
         }
     }
+    
+    
     
     func addLifes() {
         if answersWithoutMistakes == 3 {
@@ -355,6 +362,21 @@ class ViewController: UIViewController {
         animateBtn(chooseWhatsAnimate: AnimalBtnFour)
     }
     
+    func switchColor() {
+        view.backgroundColor = backgroundColor
+        YouWin.textColor = btnColor
+        if checkSwitch {
+            heartOne.tintColor = .red
+            heartTwo.tintColor = .red
+            heartThree.tintColor = .red
+            heartFour.tintColor = .red
+        } else {
+            heartOne.tintColor = .white
+            heartTwo.tintColor = .white
+            heartThree.tintColor = .white
+            heartFour.tintColor = .white
+        }
+    }
     
 }
 

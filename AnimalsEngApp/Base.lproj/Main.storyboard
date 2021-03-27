@@ -163,6 +163,7 @@
                         <outlet property="ScoreCount" destination="bbg-z4-zCz" id="UPh-rE-nCE"/>
                         <outlet property="ScoreStack" destination="L8Z-5K-3iJ" id="l9R-Fa-ASQ"/>
                         <outlet property="YouWin" destination="D2E-IN-N5w" id="AiC-Aq-4Bu"/>
+                        <outlet property="backBtn" destination="XBN-ww-7QS" id="sAB-Cc-8o3"/>
                         <outlet property="heartFour" destination="dWx-f9-yBj" id="qbd-Nw-n5a"/>
                         <outlet property="heartOne" destination="MlE-Zn-DJV" id="W5O-zW-mbo"/>
                         <outlet property="heartThree" destination="71q-kN-9uB" id="h8q-tF-FrL"/>
@@ -230,6 +231,28 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Noir" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yr-gq-7rh">
+                                <rect key="frame" x="132" y="740" width="28" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PG-36-3BP">
+                                <rect key="frame" x="227" y="740" width="36" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ygj-yC-BES">
+                                <rect key="frame" x="168" y="737" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="onTintColor" red="0.92700950386597936" green="0.45684833773183292" blue="0.61925421981539708" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="colorSwitchSwitch" destination="gGp-HT-VwA" eventType="valueChanged" id="Xnn-e3-g6S"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="f6g-5M-5Ax"/>
                         <color key="backgroundColor" systemColor="secondaryLabelColor"/>
@@ -237,6 +260,7 @@
                     <connections>
                         <outlet property="animalPackBtn" destination="dOQ-Vj-Nxh" id="nuV-PM-fub"/>
                         <outlet property="clothesPackBtn" destination="QHc-3Y-ScE" id="Ofh-6U-MRs"/>
+                        <outlet property="colorSwitch" destination="Ygj-yC-BES" id="qix-CU-9cH"/>
                         <outlet property="flagsPackBtn" destination="aa1-qL-Dv7" id="qqj-qs-3Wu"/>
                     </connections>
                 </viewController>
