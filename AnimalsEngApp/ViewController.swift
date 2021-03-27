@@ -135,7 +135,6 @@ class ViewController: UIViewController {
             animalsImage = [
                 "Pig" : #imageLiteral(resourceName: "icons8-pig"), "Horse" : #imageLiteral(resourceName: "icons8-trotting_horse"), "Elephant" : #imageLiteral(resourceName: "icons8-elephant"),
                 "Sheep" : #imageLiteral(resourceName: "icons8-sheep"), "Rat" : #imageLiteral(resourceName: "icons8-rat_silhouette"), "Bird" : #imageLiteral(resourceName: "icons8-dove"),
-                
                 "Cat" : #imageLiteral(resourceName: "icons8-pet_commands_stay"), "Cow" : #imageLiteral(resourceName: "icons8-cow"), "Monkey" : #imageLiteral(resourceName: "icons8-harambe_the_gorilla"),
                 "Goat" : #imageLiteral(resourceName: "icons8-year_of_goat"), "Hippopotamus" : #imageLiteral(resourceName: "icons8-hippopotamus")
             ]
@@ -163,6 +162,22 @@ class ViewController: UIViewController {
                 "Eritrea" : #imageLiteral(resourceName: "icons8-eritrea"), "Estonia" : #imageLiteral(resourceName: "icons8-estonia"), "Faroe Islands" : #imageLiteral(resourceName: "icons8-faroe_islands"),
                 "Fiji" : #imageLiteral(resourceName: "icons8-fiji"), "Finland" : #imageLiteral(resourceName: "icons8-finland"), "Micronesia" : #imageLiteral(resourceName: "icons8-micronesia"),
                 "St. Barthelemy" : #imageLiteral(resourceName: "icons8-st_barthelemy"), "Spain" : #imageLiteral(resourceName: "icons8-ceuta_melilla"),
+            ]
+        case "clothingPack":
+            animalsImage = [
+                "Bag" : #imageLiteral(resourceName: "icons8-bag-100.png"), "Beret" : #imageLiteral(resourceName: "icons8-beret-100.png"), "Boots" : #imageLiteral(resourceName: "icons8-boots-100.png"),
+                "Hat" : #imageLiteral(resourceName: "icons8-bowler-hat-100.png"), "Bra" : #imageLiteral(resourceName: "icons8-bra-100.png"), "Cap" : #imageLiteral(resourceName: "icons8-cap-100.png"),
+                "Coat" : #imageLiteral(resourceName: "icons8-coat-100.png"), "Ring" : #imageLiteral(resourceName: "icons8-diamond-ring-100.png"), "Earrings" : #imageLiteral(resourceName: "icons8-earrings-100.png"),
+                "Bow tie" : #imageLiteral(resourceName: "icons8-filled-bow-tie-100.png"), "Flip flops" : #imageLiteral(resourceName: "icons8-flip-flops-100.png"), "Glasses" : #imageLiteral(resourceName: "icons8-glasses-100.png"),
+                "Dress" : #imageLiteral(resourceName: "icons8-green-dress-100.png"), "Jacket" : #imageLiteral(resourceName: "icons8-jacket-100.png"), "Jeans" : #imageLiteral(resourceName: "icons8-jeans-100.png"),
+                "Belt" : #imageLiteral(resourceName: "icons8-mens-belt-100.png"), "Mitten" : #imageLiteral(resourceName: "icons8-mitten-100.png"), "Helmet" : #imageLiteral(resourceName: "icons8-motorbike-helmet-100.png"),
+                "Necklace" : #imageLiteral(resourceName: "icons8-necklace-100.png"), "Panama hat" : #imageLiteral(resourceName: "icons8-panama-hat-100.png"), "Puffer Jacket" : #imageLiteral(resourceName: "icons8-puffer-jacket-100.png"),
+                "Sandals" : #imageLiteral(resourceName: "icons8-sandals-100.png"), "Scarf" : #imageLiteral(resourceName: "icons8-scarf-100.png"), "Backpack" : #imageLiteral(resourceName: "icons8-school-backpack-100.png"),
+                "Shirt" : #imageLiteral(resourceName: "icons8-shirt-100.png"), "Shorts" : #imageLiteral(resourceName: "icons8-shorts-100.png"), "Skirt" : #imageLiteral(resourceName: "icons8-skirt-100.png"),
+                "Socks" : #imageLiteral(resourceName: "icons8-socks-100.png"), "Sunglasses" : #imageLiteral(resourceName: "icons8-sun-glasses-100.png"), "Sweater" : #imageLiteral(resourceName: "icons8-sweater-100.png"),
+                "T-shirt" : #imageLiteral(resourceName: "icons8-t-shirt-100.png"), "Tie" : #imageLiteral(resourceName: "icons8-tie-100.png"), "Trainers" : #imageLiteral(resourceName: "icons8-trainers-100.png"),
+                "Umbrella" : #imageLiteral(resourceName: "icons8-umbrella-100.png"), "Watch" : #imageLiteral(resourceName: "icons8-watches-front-view-100.png"), "High heels" : #imageLiteral(resourceName: "icons8-women`s-shoe-100.png"),
+                "Blouse" : #imageLiteral(resourceName: "icons8-womens-blouse-100.png"), "Pink Pants" : #imageLiteral(resourceName: "icons8-womens-pants-100.png")
             ]
         default:
             break

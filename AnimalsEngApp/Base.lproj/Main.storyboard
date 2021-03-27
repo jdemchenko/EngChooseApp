@@ -182,7 +182,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOQ-Vj-Nxh">
-                                <rect key="frame" x="112" y="348" width="166" height="78"/>
+                                <rect key="frame" x="112" y="446" width="166" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
@@ -196,7 +196,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aa1-qL-Dv7">
-                                <rect key="frame" x="112" y="462" width="166" height="78"/>
+                                <rect key="frame" x="112" y="560" width="166" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
@@ -208,12 +208,35 @@
                                     <segue destination="BYZ-38-t0r" kind="modal" identifier="flagsPackIdentifire" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="F5P-ya-xIK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHc-3Y-ScE">
+                                <rect key="frame" x="112" y="321" width="166" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                <state key="normal" title="Clothing">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="animalPackBtn:" destination="T6g-yQ-2KK" eventType="touchUpInside" id="5AF-sg-T0Q"/>
+                                    <action selector="animalPackBtnPressed" destination="gGp-HT-VwA" eventType="touchUpInside" id="34e-l9-Ynn"/>
+                                    <action selector="clothesPackBtnPressed" destination="gGp-HT-VwA" eventType="touchUpInside" id="58F-0P-jds"/>
+                                    <segue destination="BYZ-38-t0r" kind="modal" identifier="clothesPackidentifire" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="gWS-MF-3lv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Theme Of Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRM-si-cqa">
+                                <rect key="frame" x="73" y="207" width="245" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="f6g-5M-5Ax"/>
                         <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                     </view>
                     <connections>
                         <outlet property="animalPackBtn" destination="dOQ-Vj-Nxh" id="nuV-PM-fub"/>
+                        <outlet property="clothesPackBtn" destination="QHc-3Y-ScE" id="Ofh-6U-MRs"/>
                         <outlet property="flagsPackBtn" destination="aa1-qL-Dv7" id="qqj-qs-3Wu"/>
                     </connections>
                 </viewController>
@@ -224,7 +247,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="PbE-uh-Df8"/>
+        <segue reference="gWS-MF-3lv"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.uturn.backward" catalog="system" width="128" height="112"/>
