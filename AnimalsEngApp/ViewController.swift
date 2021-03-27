@@ -43,6 +43,7 @@ class ViewController: UIViewController {
     var animalOfBtnFour = ""
     var score = 0
     var life = 4
+    var answersWithoutMistakes = 0
     
     var checkFirst = "Not correctly"
     var checkSecond = "Not correctly"
@@ -95,11 +96,22 @@ class ViewController: UIViewController {
     // MARK: - Public Methods
     private func reduceLives() {
         switch life {
+        case 4:
+            heartOne.isHidden = false
+            heartTwo.isHidden = false
+            heartThree.isHidden = false
+            heartFour.isHidden = false
         case 3:
+            heartOne.isHidden = false
+            heartTwo.isHidden = false
+            heartThree.isHidden = false
             heartFour.isHidden = true
         case 2:
+            heartOne.isHidden = false
+            heartTwo.isHidden = false
             heartThree.isHidden = true
         case 1:
+            heartOne.isHidden = false
             heartTwo.isHidden = true
         case ...0:
             heartOne.isHidden = true
@@ -107,6 +119,13 @@ class ViewController: UIViewController {
             youLoseShow()
         default:
             life = 4
+        }
+    }
+    
+    func addLifes() {
+        if answersWithoutMistakes == 3 {
+            life += 1
+            answersWithoutMistakes = 0
         }
     }
     
@@ -170,6 +189,7 @@ class ViewController: UIViewController {
     func btnPressAction(whichCheck: String) {
         scoreCheck(check: whichCheck)
         checkWinsScores()
+        addLifes()
         reduceLives()
     }
     
@@ -262,8 +282,10 @@ class ViewController: UIViewController {
     func scoreCheck(check: String) {
         if check == "Correctly" {
             score += 1
+            answersWithoutMistakes += 1
         } else {
             life -= 1
+            answersWithoutMistakes = 0
         }
         ScoreCount.text = String(score)
     }
