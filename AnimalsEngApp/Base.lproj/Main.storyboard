@@ -99,7 +99,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBN-ww-7QS">
                                 <rect key="frame" x="10" y="41" width="66" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="66" id="Ecl-xA-YTz"/>
                                     <constraint firstAttribute="height" constant="32" id="JV2-57-Sdy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
@@ -109,6 +108,27 @@
                                     <segue destination="gGp-HT-VwA" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="JnM-SL-LOK"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Iqu-BQ-9vq" userLabel="Lifes Stack ">
+                                <rect key="frame" x="224.66666666666666" y="47" width="106.66666666666666" height="20.333333333333329"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MlE-Zn-DJV">
+                                        <rect key="frame" x="0.0" y="1.5" width="20.666666666666668" height="17.833333333333336"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uUJ-Sm-Jc5">
+                                        <rect key="frame" x="28.666666666666686" y="1.5" width="20.666666666666671" height="17.833333333333336"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="71q-kN-9uB">
+                                        <rect key="frame" x="57.333333333333336" y="1.5" width="20.666666666666664" height="17.833333333333336"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dWx-f9-yBj">
+                                        <rect key="frame" x="86.000000000000028" y="1.5" width="20.666666666666671" height="17.833333333333336"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondaryLabelColor"/>
@@ -117,6 +137,7 @@
                             <constraint firstItem="Nw6-uO-4rN" firstAttribute="top" secondItem="XPn-eW-nvc" secondAttribute="bottom" constant="70" id="1IJ-Fw-yC3"/>
                             <constraint firstItem="w5Q-Ou-wvm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="5mE-hb-5JX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Nw6-uO-4rN" secondAttribute="bottom" constant="168" id="E0r-zF-AX5"/>
+                            <constraint firstItem="Iqu-BQ-9vq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="3" id="EE8-sV-UlM"/>
                             <constraint firstItem="Fzo-u2-APc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="118" id="J4l-ab-Uwp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="XBN-ww-7QS" secondAttribute="top" constant="3" id="Oby-nd-LIs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XBN-ww-7QS" secondAttribute="trailing" symbolic="YES" id="Ohb-BJ-gau"/>
@@ -127,6 +148,7 @@
                             <constraint firstItem="7ia-BB-tgb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="VUq-qv-g7d"/>
                             <constraint firstItem="D2E-IN-N5w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wdd-27-KsL"/>
                             <constraint firstItem="7ia-BB-tgb" firstAttribute="top" secondItem="w5Q-Ou-wvm" secondAttribute="bottom" constant="70" id="aQC-k7-BDV"/>
+                            <constraint firstItem="Iqu-BQ-9vq" firstAttribute="leading" secondItem="gqf-3F-5rA" secondAttribute="trailing" constant="-60" id="b6Y-AB-frX"/>
                             <constraint firstItem="Nw6-uO-4rN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="iK9-Mg-DVF"/>
                             <constraint firstItem="XPn-eW-nvc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="kv7-O8-oFt"/>
                             <constraint firstItem="L8Z-5K-3iJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="41" id="lui-7k-A5m"/>
@@ -141,6 +163,10 @@
                         <outlet property="ScoreCount" destination="bbg-z4-zCz" id="UPh-rE-nCE"/>
                         <outlet property="ScoreStack" destination="L8Z-5K-3iJ" id="l9R-Fa-ASQ"/>
                         <outlet property="YouWin" destination="D2E-IN-N5w" id="AiC-Aq-4Bu"/>
+                        <outlet property="heartFour" destination="dWx-f9-yBj" id="qbd-Nw-n5a"/>
+                        <outlet property="heartOne" destination="MlE-Zn-DJV" id="W5O-zW-mbo"/>
+                        <outlet property="heartThree" destination="71q-kN-9uB" id="h8q-tF-FrL"/>
+                        <outlet property="heartTwo" destination="uUJ-Sm-Jc5" id="dED-ea-xxs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -202,6 +228,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.uturn.backward" catalog="system" width="128" height="112"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="icons8-elephant" width="100" height="100"/>
         <image name="icons8-hippopotamus" width="100" height="100"/>
         <image name="icons8-sheep" width="100" height="100"/>

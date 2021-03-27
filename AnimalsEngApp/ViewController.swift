@@ -14,6 +14,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var ScoreCount: UILabel!
     @IBOutlet weak var YouWin: UILabel!
     
+    @IBOutlet weak var heartOne: UIImageView!
+    @IBOutlet weak var heartTwo: UIImageView!
+    @IBOutlet weak var heartThree: UIImageView!
+    @IBOutlet weak var heartFour: UIImageView!
+    
     @IBOutlet weak var ScoreStack: UIStackView!
     
     @IBOutlet weak var AnimalBtnFirst: UIButton!
@@ -37,6 +42,7 @@ class ViewController: UIViewController {
     var animalOfBtnThird = ""
     var animalOfBtnFour = ""
     var score = 0
+    var life = 4
     
     var checkFirst = "Not correctly"
     var checkSecond = "Not correctly"
@@ -87,6 +93,23 @@ class ViewController: UIViewController {
     
     
     // MARK: - Public Methods
+    private func reduceLives() {
+        switch life {
+        case 3:
+            heartFour.isHidden = true
+        case 2:
+            heartThree.isHidden = true
+        case 1:
+            heartTwo.isHidden = true
+        case ...0:
+            heartOne.isHidden = true
+            hideElementsOfInterface()
+            youLoseShow()
+        default:
+            life = 4
+        }
+    }
+    
     func choosePack() {
         switch checkPack {
         case "animalsPack":
@@ -147,7 +170,7 @@ class ViewController: UIViewController {
     func btnPressAction(whichCheck: String) {
         scoreCheck(check: whichCheck)
         checkWinsScores()
-        checkLoseScores()
+        reduceLives()
     }
     
     func setImage() {
@@ -240,7 +263,7 @@ class ViewController: UIViewController {
         if check == "Correctly" {
             score += 1
         } else {
-            score -= 1
+            life -= 1
         }
         ScoreCount.text = String(score)
     }
@@ -253,16 +276,9 @@ class ViewController: UIViewController {
         }
     }
     
-    func checkLoseScores() {
-        if score < -4 {
-            hideElementsOfInterface()
-            youLoseShow()
-        }
-    }
     
     func checkWinsScores() {
         if score > 19 {
-            hideElementsOfInterface()
             youWinShow()
         }
     }
@@ -278,9 +294,13 @@ class ViewController: UIViewController {
     
     func youWinShow() {
         YouWin.isHidden = false
+        hideElementsOfInterface()
+        YouWin.text = "You Win!"
     }
+    
     func youLoseShow() {
         YouWin.isHidden = false
+        hideElementsOfInterface()
         YouWin.text = "Game Over"
     }
     
