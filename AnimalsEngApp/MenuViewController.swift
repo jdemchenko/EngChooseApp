@@ -15,7 +15,7 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var colorSwitch: UISwitch!
     
 
-    let systemSoundSlider: SystemSoundID = 1150
+    let systemSoundSlider: SystemSoundID = 1152
  
     
     var check = "animalPack"

@@ -397,7 +397,7 @@ class ViewController: UIViewController {
     
     func textToSpeech(text: String) {
         utterance = AVSpeechUtterance(string: text)
-        utterance.voice = AVSpeechSynthesisVoice(language: "en-en")
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-GB") //also you can use en-en, en, eb-GB
         utterance.rate = 0.4
         synthesizer.speak(utterance)
     }
