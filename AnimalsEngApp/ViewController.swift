@@ -59,6 +59,10 @@ class ViewController: UIViewController {
     var utterance = AVSpeechUtterance(string: "Error")
     let synthesizer = AVSpeechSynthesizer()
     
+    let systemSoundNotCorrectlyAnswer: SystemSoundID = 1053
+    let systemSoundGameOver: SystemSoundID  = 1334
+    let systemSoundWin: SystemSoundID  = 1325
+    
     // MARK: Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -129,6 +133,7 @@ class ViewController: UIViewController {
             heartOne.isHidden = true
             hideElementsOfInterface()
             youLoseShow()
+            AudioServicesPlaySystemSound(systemSoundGameOver)
         default:
             life = 4
         }
@@ -327,6 +332,7 @@ class ViewController: UIViewController {
         if check == "Correctly" {
             next()
         } else {
+            AudioServicesPlaySystemSound(systemSoundNotCorrectlyAnswer)
             btn.isEnabled = false
         }
     }
@@ -335,6 +341,7 @@ class ViewController: UIViewController {
     func checkWinsScores() {
         if score > 19 {
             youWinShow()
+            AudioServicesPlaySystemSound(systemSoundWin)
         }
     }
     

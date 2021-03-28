@@ -5,6 +5,7 @@
 //  Created by macbook on 26.03.21.
 //
 import UIKit
+import AVFoundation
 
 class MenuViewController: UIViewController {
     
@@ -14,7 +15,8 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var colorSwitch: UISwitch!
     
 
-    
+    let systemSoundSlider: SystemSoundID = 1150
+ 
     
     var check = "animalPack"
     var identifire = ""
@@ -52,6 +54,7 @@ class MenuViewController: UIViewController {
         identifire = "clothesPackidentifire"
     }
     @IBAction func colorSwitchSwitch() {
+        AudioServicesPlaySystemSound(systemSoundSlider)
         switchColor()
     }
         
