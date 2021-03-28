@@ -39,7 +39,7 @@
                                     <color key="titleColor" systemColor="systemGrayColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="BtnFirstPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tIX-QF-gZV"/>
+                                    <action selector="ButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="61F-07-hbq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5Q-Ou-wvm">
@@ -52,7 +52,7 @@
                                     <color key="titleColor" systemColor="systemGrayColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="BtnSecondPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Shw-cJ-SjH"/>
+                                    <action selector="ButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UOC-M4-zuV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ia-BB-tgb">
@@ -63,7 +63,7 @@
                                 </constraints>
                                 <state key="normal" image="icons8-trotting_horse"/>
                                 <connections>
-                                    <action selector="BtnThirdPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C28-hw-xey"/>
+                                    <action selector="ButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EdL-RZ-kxa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nw6-uO-4rN">
@@ -76,7 +76,7 @@
                                     <color key="titleColor" systemColor="systemGrayColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="BtnFourPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wa1-fO-15Q"/>
+                                    <action selector="ButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gpa-fG-3EK"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="L8Z-5K-3iJ">

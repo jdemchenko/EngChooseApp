@@ -55,6 +55,7 @@ class ViewController: UIViewController {
     var backgroundColor = #colorLiteral(red: 0.1411584616, green: 0.141189754, blue: 0.1582941115, alpha: 1)
     var btnColor = #colorLiteral(red: 0.3332971931, green: 0.3333585858, blue: 0.3332890868, alpha: 1)
     var checkSwitch = false
+    var checkBtn = ""
     
     var utterance = AVSpeechUtterance(string: "Error")
     let synthesizer = AVSpeechSynthesizer()
@@ -86,27 +87,26 @@ class ViewController: UIViewController {
     
     
     // MARK: ID Action
-    @IBAction func BtnFirstPress(_ sender: Any) {
-        btnPressAction(whichCheck: checkFirst)
-        answerCheck(check: checkFirst, btn: AnimalBtnFirst)
+    
+    @IBAction func ButtonsPressed(_ sender: UIButton) {
+        
+        switch sender {
+        case AnimalBtnFirst:
+            checkBtn = checkFirst
+        case AnimalBtnSecond:
+            checkBtn = checkSecond
+        case AnimalBtnThird:
+            checkBtn = checkThird
+        case AnimalBtnFour:
+            checkBtn = checkFour
+        default:
+            break
+        }
+        btnPressAction(whichCheck: checkBtn)
+        answerCheck(check: checkBtn, btn: sender)
     }
     
-    @IBAction func BtnSecondPress(_ sender: Any) {
-        btnPressAction(whichCheck: checkSecond)
-        answerCheck(check: checkSecond, btn: AnimalBtnSecond)
-    }
-    
-    
-    @IBAction func BtnThirdPress(_ sender: Any) {
-        btnPressAction(whichCheck: checkThird)
-        answerCheck(check: checkThird, btn: AnimalBtnThird)
-    }
-    
-    
-    @IBAction func BtnFourPress(_ sender: Any) {
-        btnPressAction(whichCheck: checkFour)
-        answerCheck(check: checkFour, btn: AnimalBtnFour)
-    }
+   
     
     
     // MARK: - Public Methods
@@ -398,7 +398,7 @@ class ViewController: UIViewController {
     func textToSpeech(text: String) {
         utterance = AVSpeechUtterance(string: text)
         utterance.voice = AVSpeechSynthesisVoice(language: "en-GB") //also you can use en-en, en, eb-GB
-        utterance.rate = 0.4
+        utterance.rate = 0.5
         synthesizer.speak(utterance)
     }
     
