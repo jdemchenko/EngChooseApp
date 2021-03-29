@@ -14,10 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var ScoreCount: UILabel!
     @IBOutlet weak var YouWin: UILabel!
     
-    @IBOutlet weak var heartOne: UIImageView!
-    @IBOutlet weak var heartTwo: UIImageView!
-    @IBOutlet weak var heartThree: UIImageView!
-    @IBOutlet weak var heartFour: UIImageView!
+    @IBOutlet var lifesHearts: [UIImageView]!
     
     @IBOutlet weak var ScoreStack: UIStackView!
     
@@ -113,24 +110,22 @@ class ViewController: UIViewController {
     private func reduceLives() {
         switch life {
         case 4:
-            heartOne.isHidden = false
-            heartTwo.isHidden = false
-            heartThree.isHidden = false
-            heartFour.isHidden = false
+            lifesHearts.forEach { heart in heart.isHidden = false }
         case 3:
-            heartOne.isHidden = false
-            heartTwo.isHidden = false
-            heartThree.isHidden = false
-            heartFour.isHidden = true
+            lifesHearts.forEach { heart in
+                heart.isHidden = (heart.tag == 4) }
         case 2:
-            heartOne.isHidden = false
-            heartTwo.isHidden = false
-            heartThree.isHidden = true
+            lifesHearts.forEach { heart in
+                heart.isHidden = ((heart.tag == 3) || (heart.tag == 4))
+            }
         case 1:
-            heartOne.isHidden = false
-            heartTwo.isHidden = true
+            lifesHearts.forEach { heart in
+                heart.isHidden = (heart.tag == 1) ? false : true
+            }
         case ...0:
-            heartOne.isHidden = true
+            lifesHearts.forEach { heart in
+                heart.isHidden = true
+            }
             hideElementsOfInterface()
             youLoseShow()
             AudioServicesPlaySystemSound(systemSoundGameOver)
@@ -383,15 +378,13 @@ class ViewController: UIViewController {
     func switchColor() {
         view.backgroundColor = backgroundColor
         if checkSwitch {
-            heartOne.tintColor = .red
-            heartTwo.tintColor = .red
-            heartThree.tintColor = .red
-            heartFour.tintColor = .red
+            lifesHearts.forEach { heart in
+                heart.tintColor = .red
+            }
         } else {
-            heartOne.tintColor = .white
-            heartTwo.tintColor = .white
-            heartThree.tintColor = .white
-            heartFour.tintColor = .white
+            lifesHearts.forEach { heart in
+                heart.tintColor = .white
+            }
         }
     }
     

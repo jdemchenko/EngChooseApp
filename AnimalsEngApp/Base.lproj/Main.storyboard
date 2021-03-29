@@ -111,19 +111,19 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Iqu-BQ-9vq" userLabel="Lifes Stack ">
                                 <rect key="frame" x="262" y="64" width="106.66666666666669" height="20.333333333333329"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MlE-Zn-DJV">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MlE-Zn-DJV">
                                         <rect key="frame" x="0.0" y="1.9999999999999982" width="20.666666666666668" height="17.333333333333336"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uUJ-Sm-Jc5">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uUJ-Sm-Jc5">
                                         <rect key="frame" x="28.666666666666686" y="1.9999999999999982" width="20.666666666666671" height="17.333333333333336"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="71q-kN-9uB">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="71q-kN-9uB">
                                         <rect key="frame" x="57.333333333333307" y="1.9999999999999982" width="20.666666666666664" height="17.333333333333336"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dWx-f9-yBj">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dWx-f9-yBj">
                                         <rect key="frame" x="86" y="1.9999999999999982" width="20.666666666666671" height="17.333333333333336"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
@@ -166,10 +166,10 @@
                         <outlet property="ScoreStack" destination="L8Z-5K-3iJ" id="l9R-Fa-ASQ"/>
                         <outlet property="YouWin" destination="D2E-IN-N5w" id="AiC-Aq-4Bu"/>
                         <outlet property="backBtn" destination="XBN-ww-7QS" id="sAB-Cc-8o3"/>
-                        <outlet property="heartFour" destination="dWx-f9-yBj" id="qbd-Nw-n5a"/>
-                        <outlet property="heartOne" destination="MlE-Zn-DJV" id="W5O-zW-mbo"/>
-                        <outlet property="heartThree" destination="71q-kN-9uB" id="h8q-tF-FrL"/>
-                        <outlet property="heartTwo" destination="uUJ-Sm-Jc5" id="dED-ea-xxs"/>
+                        <outletCollection property="lifesHearts" destination="MlE-Zn-DJV" collectionClass="NSMutableArray" id="DOi-NQ-7Xr"/>
+                        <outletCollection property="lifesHearts" destination="uUJ-Sm-Jc5" collectionClass="NSMutableArray" id="dF0-xS-VvZ"/>
+                        <outletCollection property="lifesHearts" destination="71q-kN-9uB" collectionClass="NSMutableArray" id="ago-4e-w35"/>
+                        <outletCollection property="lifesHearts" destination="dWx-f9-yBj" collectionClass="NSMutableArray" id="YeN-KG-eKA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
