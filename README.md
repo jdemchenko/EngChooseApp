@@ -1,2 +1,2 @@
 # EngChooseApp
-* Simple app-game for learning english words *
+*Simple app-game for learning english words*
